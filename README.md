@@ -7,3 +7,4 @@ This analysis is about a company of shareable bicycles called *Cyclistics* who w
 
 **What you will find in this document:** A step by step description on the data manipulation and cleaning using R, the link to datasets, the analysis and data viz. on Google sheets & Tableau and finally a google slides presentation with the relevant information and next steps recommendations.
 
+[Linkedin] (https://www.linkedin.com/in/tob%C3%ADas-traverso-aa6442111/)
