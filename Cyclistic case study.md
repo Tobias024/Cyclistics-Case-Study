@@ -1,7 +1,7 @@
 # Case study: Cyclistic
 
 
-### Ask:
+## Ask:
 
 #### What you will find in this document:
 
@@ -9,8 +9,8 @@ This document shares the steps in the analysis of a data set regarding a company
 
 #### Stakeholders:
 
--   Lily Moreno
--   Cyclistic executive team.\
+-   Lily Moreno.
+-   Cyclistic executive team.
 
 #### Questions to answer:
 
@@ -20,14 +20,14 @@ This document shares the steps in the analysis of a data set regarding a company
 
 *Business task*: Find the relationships between annual and casual memberships.
 
-### Prepare:
+## Prepare:
 
 All data sets can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html). This analysis was based on first source information from last year (2022).
 
 For the purposes of this case study, the data sets are appropriate and will allow to answer the company's questions. The data has been provided by a company under this [license](https://ride.divvybikes.com/data-license-agreement).
 
-\
-1. All data sets and libraries were imported. The libraries used were:
+
+1. We started by importing all data sets and libraries. The libraries used were:
 
 ```{r}
 library(readr)
@@ -41,20 +41,20 @@ library(lubridate)
 ```
 
 \
-2. Merged data sets to create a single one:
+2. We merged data sets to create a single one:
 
 ```{r}
 totaltripdata <- rbind(X202112_divvy_tripdata,X202201_divvy_tripdata,	X202202_divvy_tripdata,	X202203_divvy_tripdata,	X202204_divvy_tripdata,	X202205_divvy_tripdata,	X202206_divvy_tripdata,	X202207_divvy_tripdata,	X202208_divvy_tripdata,	X202209_divvy_publictripdata,	X202210_divvy_tripdata,	X202211_divvy_tripdata,	X202212_divvy_tripdata)
 ttd <- totaltripdata
 ```
 
-\
 
-### Process:
+
+## Process:
 
 #### Used tools:
 
-In order to prepare, organize and clean the data we used R Studio. The language R allows to create summarized tables with relevant information at big scale with which all visualizations were then created. Although R is capable of creating visualization, in this case, most of them were created on *Google sheets* and *tableau* due to aesthetics & efficiency.
+In order to prepare, organize and clean the data we used *R Studio*. *R* allows to create summarized tables with relevant information at big scale with which all visualizations were then created. Although *R* is capable of creating visualization aswell, in this case, most of them were created on *Google sheets* and *tableau* due to aesthetics & efficiency.
 
 \
 3. After noticing there were duplicated rows, they were removed by using:
@@ -103,9 +103,9 @@ Sample_geo_end <- Geo_End[sample(nrow(Geo_End), 100, replace = FALSE), ]
 #Save
 ```
 
-Afterwards we loaded this information on tableau and proceeded to create Maps to have a more clear view of where the most used start and end stations were. You can find it [here](https://public.tableau.com/views/CycliticsStations/Story1)\
+Afterwards we loaded this information on tableau and proceeded to create Maps to have a more clear view of where the most used start and end stations were. You can find it [here.](https://public.tableau.com/views/CycliticsStations/Story1)
 
-6.  To understand the distribution of members & casuals by type of rideable along the year we created a new table using:
+6.  To understand the distribution of members & casuals by rideable type along the year we created a new table using:
 
 ```{r}
 months_of_year <- unique_ttd %>% 
@@ -116,7 +116,7 @@ months_of_year <- unique_ttd %>%
 view(months_of_year)
 ```
 
-And saved it as csv using the "write.csv" function
+And saved it as csv using the "write.csv" function.
 
 7.  Now we wanted to understand the most frequent day usage between members and casuals, also by rideable type:
 
@@ -129,15 +129,15 @@ days_of_week <- unique_ttd %>%
 view(days_of_week)
 ```
 
-And saved it as csv using the "write.csv" function
+And saved it as csv using the "write.csv" function.
 
-Afterwards, we loaded the different tables into google sheets to process as different Pivots. You can access by clicking [Here](https://docs.google.com/spreadsheets/d/1c3dkHICGCMb71rwtfu_XPAY1iNQ_5oJ2OGz6Phsgjn8/edit?usp=sharing)
+Afterwards, we loaded the different tables into google sheets to process as different Pivots. You can access by clicking [Here.](https://docs.google.com/spreadsheets/d/1c3dkHICGCMb71rwtfu_XPAY1iNQ_5oJ2OGz6Phsgjn8/edit?usp=sharing)
 
-With the different pivots we created the charts that allowed us to have a clearer understanding of the information
+With the different pivots we created the charts that allowed us to have a clearer understanding of the information.
 
-### Analyze:
+## Analyze:
 
-We find out that:
+We found that:
 
 -   Casuals trips have x2.8 more time per trip than members
 -   Members have 59,03% trips.
@@ -148,6 +148,6 @@ We find out that:
 -   Members use more bikes from Monday to Fridays while Casuals have an big increase on the weekends
 -   When the temperatures increase, electric bikes usage increase as well. Most trips happen \*Casual users start & end point are more disperse than members.
 
-### Share
+## Share
 
-We proceeded to create a slide to share the information found, the takeaways and proposals as next steps. You can access the slide by clicking [here](https://docs.google.com/presentation/d/1-mk-YMbnPQjdDX4ny4MVpFn2SZq1IcSJYI7K2NT8pcM/edit#slide=id.g1dca03f005f_0_10)
+We proceeded to create a slide to share the information found, takeaways and next steps recommendations. You can access the slide by clicking [here.](https://docs.google.com/presentation/d/1-mk-YMbnPQjdDX4ny4MVpFn2SZq1IcSJYI7K2NT8pcM/edit#slide=id.g1dca03f005f_0_10)
