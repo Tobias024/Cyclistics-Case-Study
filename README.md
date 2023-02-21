@@ -1,4 +1,4 @@
-# Data Analytics Portfolio:
+# Data Analytics:
 
 ### Portfolio 1: 
 [**Case Study: Cyclistic´s**](https://github.com/Tobias024/Cyclistics-Case-Study/blob/main/Cyclistic%20case%20study.Rmd).\
